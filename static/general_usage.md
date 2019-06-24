@@ -11,24 +11,19 @@
     $section = $phpWord->addSection();
     
     //向节内添加文本
-    $section->addText(
-        '"Learn from yesterday, live for today, hope for tomorrow. '
-            . 'The important thing is not to stop questioning." '
-            . '(Albert Einstein)'
-    );
+    $section->addText('从昨天开始，为今天而活。希望不要停止思考。');
     
-    $section->addText(
-        '"Great achievement is usually born of great sacrifice, '
-            . 'and is never the result of selfishness." '
-            . '(Napoleon Hill)',
-        array('name' => 'Tahoma', 'size' => 10)
-    );
+    $section->addText('"Great achievement is usually born of great sacrifice, ',
+       [
+        'name' => 'Tahoma',
+        'size' => 10
+       ]);
     
     //设置字体样式
-    $fontStyleName = 'oneUserDefinedStyle';
+    $fontStyleName = 'oneUserDefinedStyle'
     $phpWord->addFontStyle(
         $fontStyleName,
-        array('name' => 'Tahoma', 'size' => 10, 'color' => '1B2232', 'bold' => true)
+        ['name' => 'Tahoma', 'size' => 10, 'color' => '1B2232', 'bold' => true)]
     );
     
     $section->addText(
